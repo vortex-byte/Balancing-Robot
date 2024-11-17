@@ -1,5 +1,3 @@
-# Run this program in Raspberry pi
-
 import os
 from flask import Flask, request
 from flask_socketio import SocketIO
