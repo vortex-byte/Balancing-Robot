@@ -49,23 +49,28 @@ Server GUI diinstal di Raspberry Pi.
 ```
 ping raspberrypi -t
 ```
-3. Jika Raspberry Pi belum terpasang Server GUI, clone repository ini untuk instal:
+
+Tunggu hingga mendapatkan feedback dari Raspberry Pi
+
+3. Buka Putty lalu masukkan pada Hostname ```raspberrypi```, Port ```22```, Connection Type ```SSH```. Lalu klik Open
+   
+4. Jika Raspberry Pi belum terpasang Server GUI, clone repository ini untuk instal:
 ```
 git clone https://github.com/vortex-byte/Balancing-Robot.git
 cd GUI/server
 ```
 
-4. Instal library yang dibutuhkan
+5. Instal library yang dibutuhkan
 ```
 pip install requirements
 ```
 
-5. Jalankan program Python server GUI
+6. Jalankan program Python server GUI
 ```
 python server.py
 ```
 
-6. Simpan alamat IP publik yang muncul pada server (misalnya, 192.168.x.x)
+7. Simpan alamat IP publik yang muncul pada server (misalnya, 192.168.x.x)
 
 
 ### Instalasi Client GUI
