@@ -1,4 +1,4 @@
-[![en](https://img.shields.io/badge/LANG-ENGLISH-red.svg)](https://github.com/vortex-byte/Balancing-Robot/blob/main/README.md)
+[![en](https://img.shields.io/badge/LANG-ENGLISH-red.svg)](https://github.com/vortex-byte/Balancing-Robot/blob/main/README.en.md)
 
 # Balancing Robot
 
@@ -16,6 +16,7 @@ Robot self-balancing menggunakan Arduino Mega dan Raspberry Pi 3, dilengkapi GUI
 ### Yang Dibutuhkan
 
 - [Putty](https://www.putty.org/) - Untuk login SSH ke Raspberry Pi
+- [Git](https://git-scm.com/downloads)
 - Kode Editor - Kode editor andalan anda
 - Python >= 3.9
 - Pip >= 24.x
@@ -52,12 +53,14 @@ ping raspberrypi -t
 
 Tunggu hingga mendapatkan feedback dari Raspberry Pi
 
-3. Buka Putty lalu masukkan pada Hostname ```raspberrypi```, Port ```22```, Connection Type ```SSH```. Lalu klik Open
+3. Buka Putty lalu masukkan pada Hostname: ```raspberrypi``` , Port: ```22``` , Connection Type: ```SSH```. Lalu klik Open
    
 4. Jika Raspberry Pi belum terpasang Server GUI, clone repository ini untuk instal:
 ```
-git clone https://github.com/vortex-byte/Balancing-Robot.git
-cd GUI/server
+git clone --single-branch --branch server https://github.com/vortex-byte/Balancing-Robot.git
+```
+```
+cd Balancing-Robot
 ```
 
 5. Instal library yang dibutuhkan
@@ -79,8 +82,10 @@ Client GUI dipasang di PC Anda
 
 1. Clone repository ini untuk instalasi
 ```
-git clone https://github.com/vortex-byte/Balancing-Robot.git
-cd GUI/client
+git clone --single-branch --branch client https://github.com/vortex-byte/Balancing-Robot.git
+```
+```
+cd Balancing-Robot
 ```
 
 2. Instal library yang dibutuhkan
