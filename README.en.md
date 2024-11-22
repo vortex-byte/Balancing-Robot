@@ -48,23 +48,28 @@ The GUI server runs on the Raspberry Pi.
 ```
 ping raspberrypi -t
 ```
-3. If the GUI server isn’t installed yet, clone this repository:
+
+Wait until get feedback from Raspberry Pi
+
+3. Open Putty then input the Hostname ```raspberrypi```, Port ```22```, Connection Type ```SSH```. then Open
+
+4. If the GUI server isn’t installed yet, clone this repository:
 ```
 git clone https://github.com/vortex-byte/Balancing-Robot.git
 cd GUI/server
 ```
 
-4. Install the required libraries
+5. Install the required libraries
 ```
 pip install requirements
 ```
 
-5. Start the Python GUI server program
+6. Start the Python GUI server program
 ```
 python server.py
 ```
 
-6. Note the server’s public IP address (e.g., 192.168.x.x)
+7. Note the server’s public IP address (e.g., 192.168.x.x)
 
 
 ### Installing the GUI Client
