@@ -1,3 +1,4 @@
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/vortex-byte/Balancing-Robot/blob/main/README.en.md)
 
 # Balancing Robot
 
