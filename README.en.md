@@ -16,6 +16,7 @@ A self-balancing robot using Arduino Mega and Raspberry Pi 3, with a GUI for com
 ### What You’ll Need
 
 - [Putty](https://www.putty.org/) - For SSH login to the Raspberry Pi
+- [Git](https://git-scm.com/downloads)
 - Your favorite code editor
 - Python >= 3.9
 - Pip >= 24.x
@@ -55,8 +56,10 @@ Wait until get feedback from Raspberry Pi
 
 4. If the GUI server isn’t installed yet, clone this repository:
 ```
-git clone https://github.com/vortex-byte/Balancing-Robot.git
-cd GUI/server
+git clone --single-branch --branch server https://github.com/vortex-byte/Balancing-Robot.git
+```
+```
+cd Balancing-Robot
 ```
 
 5. Install the required libraries
@@ -78,8 +81,10 @@ The GUI client runs on your PC
 
 1. Clone this repository
 ```
-git clone https://github.com/vortex-byte/Balancing-Robot.git
-cd GUI/client
+git clone --single-branch --branch client https://github.com/vortex-byte/Balancing-Robot.git
+```
+```
+cd Balancing-Robot
 ```
 
 2. Install the required libraries:
