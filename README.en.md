@@ -90,6 +90,11 @@ python client.py
 4. Enter the server’s IP address from earlier
 
 Want to customize the client GUI? Check out this tutorial:  [Tkinter Designer](https://www.youtube.com/watch?v=Qd-jJjduWeQ)
+
+## Hardware Schematic
+
+![Schematic](https://raw.githubusercontent.com/vortex-byte/Balancing-Robot/refs/heads/main/skematik.jpg)
+
 ## Let’s Connect!
 
 - [@vortex-byte](mailto:mzimam.ath@gmail.com)
