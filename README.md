@@ -1,19 +1,19 @@
-[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/vortex-byte/Balancing-Robot/blob/main/README.en.md)
+[![en](https://img.shields.io/badge/LANG-ENGLISH-red.svg)](https://github.com/vortex-byte/Balancing-Robot/blob/main/README.md)
 
 # Balancing Robot
 
-Robot self balancing menggunakan Arduino Mega dan Raspberry Pi 3 sebagai server komunikasi dengan GUI.
+Robot self-balancing menggunakan Arduino Mega dan Raspberry Pi 3, dilengkapi GUI untuk komunikasi dan monitoring.
+
 ## Fitur
 
 - GUI Monitoring dan Tuning
 - Sensor ultrasonik untuk menghindari rintangan
-- Layar LCD untuk pemberitahuan
+- Layar LCD untuk menampilkan notifikasi 
 - Pilihan mode auto pilot dan remote (soon)
 
+## Cara Penggunaan
 
-## Penggunaan
-
-### Hal yang Dibutuhkan
+### Yang Dibutuhkan
 
 - [Putty](https://www.putty.org/) - Untuk login SSH ke Raspberry Pi
 - Kode Editor - Kode editor andalan anda
@@ -23,12 +23,12 @@ Robot self balancing menggunakan Arduino Mega dan Raspberry Pi 3 sebagai server 
 
 ### Mengubah Konfigurasi Wi-Fi Raspberry Pi
 
-Raspberry Pi membutuhkan Wi-Fi untuk komunikasi dengan Client GUI. Untuk mengubah konfigurasi Wi-Fi pada Raspberry Pi berikut langkahnya:
+Raspberry Pi memerlukan koneksi Wi-Fi agar bisa berkomunikasi dengan GUI Client. Berikut cara mengubah konfigurasinya:
 
 - Lepas SD Card dari Raspberry Pi
 - Gunakan SD Card Reader untuk menghubungkan SD Card dengan PC
 - Buka partisi Boot lalu cari file ```wpa_supplicant.conf```
-- Cari text seperti berikut, lalu ubah SSID dan password Wi-Fi
+- Edit file tersebut, lalu ubah nama SSID dan password Wi-Fi sesuai dengan jaringan Anda:
 ```
 network={
     ssid="Nama_SSID"
@@ -36,19 +36,20 @@ network={
 }
 ```
 - Simpan file lalu pasang kembali SD Card ke Raspberry Pi
+
 ## Instalasi
 
 ### Instalasi Server GUI
 
-Server GUI dipasang di Raspberry Pi
+Server GUI diinstal di Raspberry Pi.
 
 1. Nyalakan robot, pastikan Raspberry Pi menyala dan terhubung ke Wi-Fi
 
-2. Pada CMD/Terminal cek ping untuk memastikan Raspberry Pi terhubung 1 jaringan dengan PC
+2. Pada CMD/Terminal cek ping untuk memastikan Raspberry Pi pada jaringan yang sama:
 ```
 ping raspberrypi -t
 ```
-3. Jika Raspberry Pi belum terpasang Server GUI, clone repository ini untuk instalasi
+3. Jika Raspberry Pi belum terpasang Server GUI, clone repository ini untuk instal:
 ```
 git clone https://github.com/vortex-byte/Balancing-Robot.git
 cd GUI/server
@@ -59,17 +60,17 @@ cd GUI/server
 pip install requirements
 ```
 
-5. Jalankan program python server GUI
+5. Jalankan program Python server GUI
 ```
 python server.py
 ```
 
-6. Simpan alamat IP publik yang muncul pada server. Contohnya 192.168.x.x
+6. Simpan alamat IP publik yang muncul pada server (misalnya, 192.168.x.x)
 
 
 ### Instalasi Client GUI
 
-Client GUI dipasang di PC
+Client GUI dipasang di PC Anda
 
 1. Clone repository ini untuk instalasi
 ```
@@ -82,14 +83,14 @@ cd GUI/client
 pip install requirements
 ```
 
-3. Jalankan program python server GUI
+3. Jalankan program Python server GUI
 ```
 python client.py
 ```
 
 4. Masukkan alamat IP server yang tadi disimpan
 
-Untuk mengubah desain client GUI, anda bisa melakukannya mengikuti tutorial berikut [Tkinter Designer](https://www.youtube.com/watch?v=Qd-jJjduWeQ)
+Jika ingin mengubah desain GUI Client, Anda bisa mengikuti tutorial berikut: [Tkinter Designer](https://www.youtube.com/watch?v=Qd-jJjduWeQ)
 ## Get in touch w/ me :)
 
 - [@vortex-byte](mailto:mzimam.ath@gmail.com)
