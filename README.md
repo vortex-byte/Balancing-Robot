@@ -91,6 +91,11 @@ python client.py
 4. Masukkan alamat IP server yang tadi disimpan
 
 Jika ingin mengubah desain GUI Client, Anda bisa mengikuti tutorial berikut: [Tkinter Designer](https://www.youtube.com/watch?v=Qd-jJjduWeQ)
+
+## Hardware Schematic
+
+![Schematic](https://raw.githubusercontent.com/vortex-byte/Balancing-Robot/refs/heads/main/skematik.jpg)
+
 ## Get in touch w/ me :)
 
 - [@vortex-byte](mailto:mzimam.ath@gmail.com)
