@@ -8,7 +8,7 @@ A self-balancing robot using Arduino Mega and Raspberry Pi 3, with a GUI for com
 - GUI for monitoring and tuning
 - Ultrasonic sensors for obstacle avoidance
 - LCD screen for notifications
-- Auto-pilot and remote modes (coming soon!)
+- Auto and remote control modes
 
 
 ## Getting Started
@@ -22,7 +22,41 @@ A self-balancing robot using Arduino Mega and Raspberry Pi 3, with a GUI for com
 - Pip >= 24.x
 - An SD card reader - For editing the Raspberry Pi firmware
 
-### Updating the Raspberry Pi Wi-Fi Configuration
+### Raspberry Pi OS Configuration
+
+<details>
+	<summary><b>Install Raspberry Pi OS</b></summary>
+    1. Insert SD Card to SD Card reader, then insert to your PC
+    2. Download, install and open [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
+    3. Match the Raspberry Pi Type, OS, and SD Card storage
+    
+    ![Type](https://cdn.mos.cms.futurecdn.net/cQHK7tWkKGRENVuMkR5Gkg-1200-80.png.webp)
+    
+    4. Open Edit Settings
+    
+    ![Type](https://cdn.mos.cms.futurecdn.net/u3EMmPAXT4AsU9gUeLHoC-1200-80.png.webp)
+    
+    5. In General tab, fill hostname, username, password, SSID, Wi-Fi Password. To make the SSH login process easier, use this configuration:
+    ``` 
+    Hostname: raspberrypi
+    Username: pi
+    Password: pi
+    SSID: Raspi
+    Wi-Fi Password: 12345678
+    TImezone: Asia/Jakarta
+    Keyboard: US
+     ```
+    
+    ![Type](https://cdn.mos.cms.futurecdn.net/Et4hHahUd3dN3nufsLKqFN-1200-80.png.webp)
+    
+    6. In Services tab, check ``` Enable SSH ``` and select ``` Use password auth ``` then click Save and Yes till the installation process is complete
+    
+    ![Type](https://cdn.mos.cms.futurecdn.net/FQPA4pWp9qswNM8feDE4ye-1200-80.png.webp)
+</details>
+
+<details
+    <summary><b>Updating the Raspberry Pi Wi-Fi Configuration</b></summary>
+</details>
 
 The Raspberry Pi needs Wi-Fi to communicate with the GUI client. Here’s how to update the Wi-Fi settings:
 
@@ -37,6 +71,7 @@ network={
 }
 ```
 - Save the file, eject the SD card, and insert it back into the Raspberry Pi
+
 ## Installation
 
 ### Installing the GUI Server
@@ -45,14 +80,14 @@ The GUI server runs on the Raspberry Pi.
 
 1. Power on the robot, ensuring the Raspberry Pi is up and connected to Wi-Fi
 
-2. Use CMD/Terminal to check if your PC is on the same network as the Raspberry Pi
+2. Use CMD/Terminal to check if your PC is on the same network as the Raspberry Pi. Ping the Raspberry Pi hostname:
 ```
 ping raspberrypi -t
 ```
 
 Wait until get feedback from Raspberry Pi
 
-3. Open Putty then input the Hostname ```raspberrypi```, Port ```22```, Connection Type ```SSH```. then Open
+3. Open Putty then in the Hostname fill with the hostname you already created. Hostname ```raspberrypi```, Port ```22```, Connection Type ```SSH```. then Open
 
 4. If the GUI server isn’t installed yet, clone this repository:
 ```
@@ -64,7 +99,7 @@ cd Balancing-Robot
 
 5. Install the required libraries
 ```
-pip install requirements
+pip install -r requirements.txt
 ```
 
 6. Start the Python GUI server program
@@ -89,7 +124,7 @@ cd Balancing-Robot
 
 2. Install the required libraries:
 ```
-pip install requirements
+pip install -r requirements.txt
 ```
 
 3. Start the Python client program:
