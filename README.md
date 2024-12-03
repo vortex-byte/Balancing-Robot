@@ -9,9 +9,10 @@ Robot self-balancing menggunakan Arduino Mega dan Raspberry Pi 3, dilengkapi GUI
 - GUI Monitoring dan Tuning
 - Sensor ultrasonik untuk menghindari rintangan
 - Layar LCD untuk menampilkan notifikasi 
-- Pilihan mode auto pilot dan remote (soon)
+- Pilihan mode auto dan kontrol manual
 
 ## Cara Penggunaan
+
 
 ### Yang Dibutuhkan
 
@@ -20,9 +21,42 @@ Robot self-balancing menggunakan Arduino Mega dan Raspberry Pi 3, dilengkapi GUI
 - Kode Editor - Kode editor andalan anda
 - Python >= 3.9
 - Pip >= 24.x
-- SD Card Reader - Untuk modifikasi firmware Raspberry Pi
+- SD Card Reader - Untuk membuat/modifikasi firmware Raspberry Pi
 
-### Mengubah Konfigurasi Wi-Fi Raspberry Pi
+### Raspberry Pi OS
+<details>
+	<summary><b>Install Raspberry Pi OS</b></summary>
+  
+1. Masukkan SD Card ke SD Card reader, lalu masukkan ke PC anda
+2. Download, install dan buka [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
+3. Sesuaikan dengan tipe Raspberry Pi anda, OS, dan SD Card anda
+
+![Type](https://cdn.mos.cms.futurecdn.net/cQHK7tWkKGRENVuMkR5Gkg-1200-80.png.webp)
+
+4. Klik Edit Settings
+
+![Type](https://cdn.mos.cms.futurecdn.net/u3EMmPAXT4AsU9gUeLHoC-1200-80.png.webp)
+
+5. Pada tab General isi hostname, username, password, SSID, Wi-Fi Password. Agar mudah saat proses login, gunakan konfigurasi berikut:
+``` 
+Hostname: raspberrypi
+Username: pi
+Password: pi
+SSID: Raspi
+Wi-Fi Password: 12345678
+TImezone: Asia/Jakarta
+Keyboard: US
+ ```
+
+![Type](https://cdn.mos.cms.futurecdn.net/Et4hHahUd3dN3nufsLKqFN-1200-80.png.webp)
+
+6. Pada Tab Services centang ``` Enable SSH ``` dan ``` Use password auth ``` lalu klik Save dan Yes hingga proses instalasi selesai
+
+![Type](https://cdn.mos.cms.futurecdn.net/FQPA4pWp9qswNM8feDE4ye-1200-80.png.webp)
+
+</details>
+<details>
+  <summary><b>Mengubah Konfigurasi Wi-Fi Raspberry Pi</b></summary>
 
 Raspberry Pi memerlukan koneksi Wi-Fi agar bisa berkomunikasi dengan GUI Client. Berikut cara mengubah konfigurasinya:
 
@@ -37,6 +71,7 @@ network={
 }
 ```
 - Simpan file lalu pasang kembali SD Card ke Raspberry Pi
+</details>
 
 ## Instalasi
 
@@ -44,16 +79,16 @@ network={
 
 Server GUI diinstal di Raspberry Pi.
 
-1. Nyalakan robot, pastikan Raspberry Pi menyala dan terhubung ke Wi-Fi
+1. Nyalakan robot, pastikan Raspberry Pi menyala dan terhubung ke Wi-Fi yang telah anda buat saat proses instalasi Raspberry Pi OS
 
-2. Pada CMD/Terminal cek ping untuk memastikan Raspberry Pi pada jaringan yang sama:
+2. Pada CMD/Terminal ping hostname untuk memastikan Raspberry Pi berada di jaringan yang sama:
 ```
 ping raspberrypi -t
 ```
 
 Tunggu hingga mendapatkan feedback dari Raspberry Pi
 
-3. Buka Putty lalu masukkan pada Hostname: ```raspberrypi``` , Port: ```22``` , Connection Type: ```SSH```. Lalu klik Open
+3. Buka Putty lalu pada Hostname isi dengan yang telah anda buat saat proses instalasi. Hostname: ```raspberrypi``` , Port: ```22``` , Connection Type: ```SSH```. Lalu klik Open
    
 4. Jika Raspberry Pi belum terpasang Server GUI, clone repository ini untuk instal:
 ```
@@ -65,7 +100,7 @@ cd Balancing-Robot
 
 5. Instal library yang dibutuhkan
 ```
-pip install requirements
+pip install -r requirements.txt
 ```
 
 6. Jalankan program Python server GUI
@@ -73,7 +108,7 @@ pip install requirements
 python server.py
 ```
 
-7. Simpan alamat IP publik yang muncul pada server (misalnya, 192.168.x.x)
+7. Simpan alamat IP yang muncul pada server (misalnya, 192.168.x.x)
 
 
 ### Instalasi Client GUI
@@ -90,7 +125,7 @@ cd Balancing-Robot
 
 2. Instal library yang dibutuhkan
 ```
-pip install requirements
+pip install -r requirements.txt
 ```
 
 3. Jalankan program Python server GUI
