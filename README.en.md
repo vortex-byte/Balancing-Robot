@@ -3,6 +3,7 @@
 # Balancing Robot
 
 A self-balancing robot using Arduino Mega and Raspberry Pi 3, with a GUI for communication and monitoring.
+
 ## Features
 
 - GUI for monitoring and tuning
@@ -10,6 +11,13 @@ A self-balancing robot using Arduino Mega and Raspberry Pi 3, with a GUI for com
 - LCD screen for notifications
 - Auto and remote control modes
 
+## Communication Design
+
+<details>
+	<summary><b>Topology</b></summary>
+
+![Topology](https://images4.imagebam.com/2b/58/1e/MEXTRR0_o.jpg)
+</details>
 
 ## Getting Started
 
