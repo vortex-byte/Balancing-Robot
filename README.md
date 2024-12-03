@@ -11,8 +11,15 @@ Robot self-balancing menggunakan Arduino Mega dan Raspberry Pi 3, dilengkapi GUI
 - Layar LCD untuk menampilkan notifikasi 
 - Pilihan mode auto dan kontrol manual
 
-## Cara Penggunaan
+## Desain Komunikasi
 
+<details>
+	<summary><b>Topologi</b></summary>
+
+![Topologi](https://images4.imagebam.com/2b/58/1e/MEXTRR0_o.jpg)
+</details>
+
+## Cara Penggunaan
 
 ### Yang Dibutuhkan
 
